@@ -1,1 +1,64 @@
 // Заголовки, общие БЄМ блоки и проче...
+.logo {
+  // .logo__text
+
+  &__text {
+    font-weight: 700;
+    @include adaptiveValue('font-size', 24, 20, 1230, 375, 1);
+    @include adaptiveValue('line-height', 28, 24, 1230, 375, 1);
+  }
+
+  // .logo__text--green
+
+  &__text--green {
+    color: $accentColor;
+  }
+
+  // .logo__text--black
+
+  &__text--black {
+    color: $titleColor;
+  }
+}
+.menu {
+  margin-right: rem(30);
+  // .menu__list
+
+  &__list {
+    display: flex;
+    gap: rem(30);
+  }
+
+  // .menu__item
+
+  &__item {
+  }
+
+  // .menu__link
+
+  &__link {
+    @include adaptiveValue('font-size', 16, 22, 1230, 375, 1);
+    @include adaptiveValue('line-height', 19, 26, 1230, 375, 1);
+    &:hover {
+      color: $accentColor;
+    }
+  }
+
+  // .menu__hint
+
+  &__hint {
+    padding: rem(20);
+    max-width: rem(336);
+    box-shadow: 0px 6px 10px rgba(6, 43, 23, 0.1);
+    border-radius: 4px;
+    display: none;
+  }
+  // .menu__text
+
+  &__text {
+    line-height: percent(19, 16);
+    &:not(:last-child) {
+      @include adaptiveValue('margin-bottom', 15, 28, 1230, 375, 1);
+    }
+  }
+}
