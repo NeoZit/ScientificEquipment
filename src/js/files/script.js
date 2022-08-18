@@ -3,18 +3,23 @@ import { isMobile } from './functions.js';
 // Подключение списка активных модулей
 import { flsModules } from './modules.js';
 
-const language = document.querySelector('.header__language');
-const select = document.querySelector('.header__select');
-const values = document.querySelector('.header__values');
-const value = document.querySelectorAll('.header__value');
+const language = document.querySelector('.select__body');
+const value = document.querySelectorAll('.select__option');
+const btnContent = document.querySelector('.select__content');
 
-language.addEventListener('click', function (e) {
-  this.classList.toggle('header__language--active');
-  select.textContent = e.target.textContent;
-  const clicked = e.target.closest('.header__value');
-  if (!clicked) return;
+if (language) {
   value.forEach(function (el) {
-    el.classList.remove('header__value--active');
+    if (btnContent.textContent === el.textContent) {
+      el.classList.add('select__option--hide');
+    }
   });
-  clicked.classList.add('header__value--active');
-});
+
+  language.addEventListener('click', function (e) {
+    const clicked = e.target.closest('.select__option');
+    if (!clicked) return;
+    value.forEach(function (el) {
+      el.classList.remove('select__option--hide');
+    });
+    clicked.classList.add('select__option--hide');
+  });
+}

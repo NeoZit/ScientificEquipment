@@ -1,16 +1,75 @@
 <!DOCTYPE html>
 <html lang="ru">
-	@@include('html/_head.htm',{
-	"title":"Главная"
-	})
-	<body>
-		<div class="wrapper">
-			@@include('html/_header.htm',{})
-			<main class="page">
-			</main>
-			@@include('html/_footer.htm',{})
-		</div>
-		@@include('html/_popup.htm',{})
-		@@include('html/_js.htm',{})
-	</body>
+  @@include('html/_head.htm',{ "title":"Главная" })
+  <body>
+    <div class="wrapper">
+      @@include('html/_header.htm',{})
+      <main class="page">
+        <section class="slider">
+          <div class="slider__container">
+            <div class="slider__inner">
+              <div class="slider__swiper swiper">
+                <div class="slider__box swiper-wrapper">
+                  <div class="slider__item swiper-slide">
+                    <div class="slider__img-box">
+                      <img src="@img/slider/motobyr.png" alt="мотобур" class="slider__img" />
+                    </div>
+                  </div>
+                  <div class="slider__item swiper-slide">
+                    <div class="slider__img-box">
+                      <img src="@img/slider/motobyr.png" alt="мотобур" class="slider__img" />
+                    </div>
+                  </div>
+                  <div class="slider__item swiper-slide">
+                    <div class="slider__img-box">
+                      <img src="@img/slider/motobyr.png" alt="мотобур" class="slider__img" />
+                    </div>
+                  </div>
+                  <div class="slider__item swiper-slide">
+                    <div class="slider__img-box">
+                      <img src="@img/slider/motobyr.png" alt="мотобур" class="slider__img" />
+                    </div>
+                  </div>
+                </div>
+                <div class="slider__button-prev">
+                  <svg width="30" height="31" viewBox="0 0 30 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M23.75 14.7159H8.925L13.4625 9.26592C13.6747 9.01065 13.7768 8.68155 13.7463 8.35102C13.7158 8.02048 13.5553 7.71559 13.3 7.50342C13.0447 7.29125 12.7156 7.18917 12.3851 7.21964C12.0546 7.25012 11.7497 7.41065 11.5375 7.66592L5.2875 15.1659C5.24545 15.2256 5.20785 15.2882 5.175 15.3534C5.175 15.4159 5.175 15.4534 5.0875 15.5159C5.03084 15.6592 5.00118 15.8118 5 15.9659C5.00118 16.12 5.03084 16.2726 5.0875 16.4159C5.0875 16.4784 5.0875 16.5159 5.175 16.5784C5.20785 16.6436 5.24545 16.7063 5.2875 16.7659L11.5375 24.2659C11.655 24.407 11.8022 24.5205 11.9686 24.5983C12.1349 24.6761 12.3164 24.7162 12.5 24.7159C12.7921 24.7165 13.0751 24.6148 13.3 24.4284C13.4266 24.3235 13.5312 24.1946 13.6079 24.0492C13.6846 23.9037 13.7318 23.7446 13.7469 23.5809C13.762 23.4172 13.7447 23.2521 13.6959 23.0951C13.6471 22.9381 13.5678 22.7922 13.4625 22.6659L8.925 17.2159H23.75C24.0815 17.2159 24.3995 17.0842 24.6339 16.8498C24.8683 16.6154 25 16.2974 25 15.9659C25 15.6344 24.8683 15.3165 24.6339 15.082C24.3995 14.8476 24.0815 14.7159 23.75 14.7159Z"
+                      fill="#DDE0E4"
+                    />
+                  </svg>
+                </div>
+                <div class="slider__button-next">
+                  <svg width="30" height="31" viewBox="0 0 30 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M6.25 14.7159H21.075L16.5375 9.26592C16.3253 9.01065 16.2232 8.68155 16.2537 8.35102C16.2842 8.02048 16.4447 7.71559 16.7 7.50342C16.9553 7.29125 17.2844 7.18917 17.6149 7.21964C17.9454 7.25012 18.2503 7.41065 18.4625 7.66592L24.7125 15.1659C24.7545 15.2256 24.7922 15.2882 24.825 15.3534C24.825 15.4159 24.825 15.4534 24.9125 15.5159C24.9692 15.6592 24.9988 15.8118 25 15.9659C24.9988 16.12 24.9692 16.2726 24.9125 16.4159C24.9125 16.4784 24.9125 16.5159 24.825 16.5784C24.7922 16.6436 24.7545 16.7063 24.7125 16.7659L18.4625 24.2659C18.345 24.407 18.1978 24.5205 18.0314 24.5983C17.8651 24.6761 17.6836 24.7162 17.5 24.7159C17.2079 24.7165 16.9249 24.6148 16.7 24.4284C16.5734 24.3235 16.4688 24.1946 16.3921 24.0492C16.3154 23.9037 16.2682 23.7446 16.2531 23.5809C16.238 23.4172 16.2553 23.2521 16.3041 23.0951C16.3529 22.9381 16.4322 22.7922 16.5375 22.6659L21.075 17.2159H6.25C5.91848 17.2159 5.60054 17.0842 5.36612 16.8498C5.1317 16.6154 5 16.2974 5 15.9659C5 15.6344 5.1317 15.3165 5.36612 15.082C5.60054 14.8476 5.91848 14.7159 6.25 14.7159Z"
+                      fill="#DDE0E4"
+                    />
+                  </svg>
+                </div>
+                <div class="slider__pagination"></div>
+              </div>
+              <div class="slider__info">
+                <h2 class="slider__title title">Профессиональное геологическое оборудование</h2>
+                <div class="slider__name">Переносной мотобур для отбора ориентированных образцов ПМБ-2б</div>
+                <p class="slider__desc">
+                  Ручной мотобур ПМБ-2б предназначен для отбора геологических, геофизических, геохимических и прочих
+                  проб, в частности для отбора ориентированных палеомагнитных кернов стандартного диаметра.
+                </p>
+                <ul class="slider__list">
+                  <li class="slider__list-item"><span class="slider__text">Бензиновый двигатель 50 см3</span></li>
+                  <li class="slider__list-item"><span class="slider__text">Вес ~5 кг</span></li>
+                  <li class="slider__list-item"><span class="slider__text">Габариты 28 × 44 × 34 см.</span></li>
+                  <li class="slider__list-item"><span class="slider__text">Система охлаждения водяная.</span></li>
+                </ul>
+                <a href="#" class="slider__btn btn"> Купить </a>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      @@include('html/_footer.htm',{})
+    </div>
+    @@include('html/_popup.htm',{}) @@include('html/_js.htm',{})
+  </body>
 </html>

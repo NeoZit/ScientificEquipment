@@ -30,7 +30,7 @@ flsFunctions.isWebp();
 /* Добавление loaded для HTML после полной загрузки страницы */
 // flsFunctions.addLoadedClass();
 /* Модуль для работы с меню (Бургер) */
-// flsFunctions.menuInit();
+flsFunctions.menuInit();
 /* Учет плавающей панели на мобильных устройствах при 100vh */
 // flsFunctions.fullVHfix();
 
@@ -39,7 +39,7 @@ flsFunctions.isWebp();
 Документация: https://template.fls.guru/template-docs/modul-spojlery.html
 Сниппет (HTML): spollers
 */
-// flsFunctions.spollers();
+flsFunctions.spollers();
 
 /*
 Модуль работы с табами
@@ -89,7 +89,7 @@ import * as flsForms from './files/forms/forms.js';
 // flsForms.formRating();
 
 /* Модуль работы с select. */
-// import './libs/select.js';
+import './libs/select.js';
 
 /* (В работе) Модуль работы с масками.*/
 /*
@@ -127,7 +127,7 @@ import * as flsForms from './files/forms/forms.js';
 Документация плагина: https://swiperjs.com/
 Сниппет(HTML): swiper
 */
-// import "./files/sliders.js";
+import "./files/sliders.js";
 
 // ========================================================================================================================================================================================================================================================
 // Модули работы с прокруткой страницы ========================================================================================================================================================================================================================================================

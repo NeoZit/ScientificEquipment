@@ -1,5 +1,12 @@
 // Заголовки, общие БЄМ блоки и проче...
+//////////////////////////////////////
+/// LOGO BLOCK
+///////////////////////////////////////
+
 .logo {
+  @media only screen and (max-width: em(900)) {
+    margin-right: auto;
+  }
   // .logo__text
 
   &__text {
@@ -20,18 +27,32 @@
     color: $titleColor;
   }
 }
+
+//////////////////////////////////////
+/// MENU BLOCK
+///////////////////////////////////////
+
 .menu {
   margin-right: rem(30);
+  @media only screen and (max-width: em(900)) {
+    margin-right: rem(0);
+  }
+
   // .menu__list
 
   &__list {
     display: flex;
     gap: rem(30);
+    @media only screen and (max-width: em(900)) {
+      flex-direction: column;
+      margin-bottom: rem(22);
+    }
   }
 
   // .menu__item
 
   &__item {
+    position: relative;
   }
 
   // .menu__link
@@ -41,18 +62,53 @@
     @include adaptiveValue('line-height', 19, 26, 1230, 375, 1);
     &:hover {
       color: $accentColor;
+      transition: all 0.5s;
     }
+  }
+
+  .menu__item:hover .menu__hint {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: all;
   }
 
   // .menu__hint
 
   &__hint {
-    padding: rem(20);
     max-width: rem(336);
-    box-shadow: 0px 6px 10px rgba(6, 43, 23, 0.1);
-    border-radius: 4px;
-    display: none;
+    position: absolute;
+    left: 50%;
+    padding-top: rem(7);
+    transform: translateX(-50%);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    width: rem(336);
+    transition: all 0.5s;
+
+    @media only screen and (max-width: em(900)) {
+      position: static;
+      left: 0%;
+      transform: translateX(0%);
+      opacity: 1;
+      visibility: visible;
+    }
   }
+
+  // .menu__hint-box
+
+  &__hint-box {
+    padding: rem(20) rem(20) rem(20);
+    background: #fff;
+    border-radius: 4px;
+    box-shadow: 0px 6px 10px rgba(6, 43, 23, 0.1);
+    @media only screen and (max-width: em(900)) {
+      box-shadow: none;
+      border-radius: 0;
+      padding: rem(26) 0 0 rem(39);
+    }
+  }
+
   // .menu__text
 
   &__text {
@@ -60,5 +116,40 @@
     &:not(:last-child) {
       @include adaptiveValue('margin-bottom', 15, 28, 1230, 375, 1);
     }
+  }
+}
+
+//////////////////////////////////////
+/// TITLE BLOCK
+///////////////////////////////////////
+
+.title {
+  font-weight: 500;
+  @include adaptiveValue('font-size', 35, 22, 1600, 375, 1);
+  @include adaptiveValue('line-height', 41, 26, 1600, 375, 1);
+  color: $titleColor;
+}
+
+//////////////////////////////////////
+/// BTN BLOCK
+///////////////////////////////////////
+
+.btn {
+  font-weight: 700;
+  @include adaptiveValue('font-size', 17, 16, 1600, 375, 1);
+  @include adaptiveValue('line-height', 20, 19, 1600, 375, 1);
+  color: #ffffff;
+  max-width: rem(300);
+  min-height: rem(60);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: rem(20);
+  background: $accentColor;
+  box-shadow: 0px rem(4) rem(20) rgba(13, 77, 42, 0.33);
+  border-radius: rem(10);
+  transition: background 0.5s;
+  &:hover {
+    background: $hoverColor;
   }
 }
