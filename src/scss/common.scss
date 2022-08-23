@@ -1,4 +1,9 @@
 // Заголовки, общие БЄМ блоки и проче...
+*[class*='__container'] {
+  @media only screen and (max-width: em(768)) {
+    padding: 0 rem(10);
+  }
+}
 //////////////////////////////////////
 /// LOGO BLOCK
 ///////////////////////////////////////
@@ -125,7 +130,7 @@
 
 .title {
   font-weight: 500;
-  @include adaptiveValue('font-size', 35, 22, 1600, 375, 1);
+  @include adaptiveValue('font-size', 35, 20, 1600, 375, 1);
   @include adaptiveValue('line-height', 41, 26, 1600, 375, 1);
   color: $titleColor;
 }
@@ -149,6 +154,23 @@
   box-shadow: 0px rem(4) rem(20) rgba(13, 77, 42, 0.33);
   border-radius: rem(10);
   transition: background 0.5s;
+  cursor: pointer;
+  &--light {
+    background: #ffffff;
+    border: rem(2) solid $accentColor;
+    color: $accentColor;
+    box-shadow: none;
+
+    &:hover {
+      border: rem(2) solid $hoverColor;
+      color: #fff;
+    }
+    &:active {
+      background: $accentColor;
+      border: rem(2) solid $accentColor;
+      color: #fff;
+    }
+  }
   &:hover {
     background: $hoverColor;
   }
@@ -164,7 +186,7 @@
 .slider {
   padding: rem(160) 0 rem(102);
   @media only screen and (max-width: em(768)) {
-    padding: rem(73) 0 rem(53);
+    padding: rem(73) 0 rem(27);
   }
 
   // .slider__container
@@ -183,6 +205,9 @@
     @media only screen and (max-width: em(1000)) {
       flex-direction: column;
     }
+    @media only screen and (max-width: em(576)) {
+      gap: rem(0);
+    }
   }
 
   // .slider__swiper-box
@@ -194,6 +219,9 @@
     }
     @media only screen and (max-width: em(1000)) {
       width: 100%;
+    }
+    @media only screen and (max-width: em(576)) {
+      margin-bottom: rem(16);
     }
   }
 
@@ -244,6 +272,9 @@
     top: 50%;
     transform: translateY(-50%);
     transition: background 0.5s;
+    @media only screen and (max-width: em(768)) {
+      display: none;
+    }
     &:hover {
       background: $hoverColor;
     }
@@ -280,6 +311,7 @@
       background: #eeeff2;
       border-radius: 50%;
       transition: all 0.5s;
+      cursor: pointer;
     }
     .swiper-pagination-bullet-active {
       width: rem(28);
@@ -307,6 +339,9 @@
     @include adaptiveValue('line-height', 26, 19, 1600, 375, 1);
     @include adaptiveValue('margin-bottom', 15, 12, 1600, 375, 1);
     color: $titleColor;
+    @media only screen and (max-width: em(768)) {
+      font-weight: 600;
+    }
   }
 
   // .slider__desc
@@ -343,6 +378,7 @@
     display: flex;
     gap: rem(15);
     align-items: center;
+
     &::before {
       content: '';
       background: url('@img/slider/check.svg') no-repeat;
@@ -352,6 +388,145 @@
   }
 
   // .slider__btn
+
+  &__btn {
+    @media only screen and (max-width: em(425)) {
+      margin: 0 auto;
+    }
+  }
+}
+
+//////////////////////////////////////
+/// SIMILAR-GOODS BLOCK
+///////////////////////////////////////
+
+.similar-goods {
+  padding: rem(50) 0 rem(127);
+  @media only screen and (max-width: em(768)) {
+    padding: rem(20) 0 rem(85);
+  }
+
+  // .similar-goods__container
+
+  &__container {
+  }
+
+  // .similar-goods__title
+
+  &__title {
+    margin-bottom: rem(127);
+    @include adaptiveValue('margin-bottom', 127, 24, 1600, 375, 1);
+  }
+
+  // .similar-goods__inner
+
+  &__inner {
+    display: flex;
+    gap: rem(50);
+    justify-content: space-between;
+    @media only screen and (max-width: em(650)) {
+      flex-direction: column;
+    }
+  }
+
+  // .similar-goods__item
+
+  &__item {
+    display: flex;
+    flex-basis: rem(550);
+    @media only screen and (max-width: em(1200)) {
+      flex-direction: column;
+      gap: rem(36);
+      flex-basis: rem(300);
+    }
+  }
+
+  // .similar-goods__box
+
+  &__box {
+    @media only screen and (max-width: em(1200)) {
+      text-align: center;
+    }
+  }
+
+  // .similar-goods__img
+
+  &__img {
+  }
+
+  // .similar-goods__info
+
+  &__info {
+  }
+
+  // .similar-goods__name
+
+  &__name {
+    font-weight: 500;
+    @include adaptiveValue('font-size', 19, 16, 1600, 375, 1);
+    @include adaptiveValue('line-height', 23, 19, 1600, 375, 1);
+    @include adaptiveValue('margin-bottom', 12, 20, 1600, 375, 1);
+    color: $titleColor;
+  }
+
+  // .similar-goods__name-link
+
+  &__name-link {
+  }
+
+  // .similar-goods__descr
+
+  &__descr {
+    @include adaptiveValue('font-size', 17, 14, 1600, 375, 1);
+    @include adaptiveValue('line-height', 25, 20, 1600, 375, 1);
+    @include adaptiveValue('margin-bottom', 22, 28, 1600, 375, 1);
+  }
+
+  // .similar-goods__btn
+
+  &__btn {
+    @media only screen and (max-width: em(375)) {
+      margin: 0 auto;
+    }
+  }
+}
+
+//////////////////////////////////////
+/// CTA BLOCK
+///////////////////////////////////////
+
+.cta {
+  // .cta__container
+
+  &__container {
+  }
+
+  // .cta__inner
+
+  &__inner {
+  }
+
+  // .cta__info
+
+  &__info {
+  }
+
+  // .cta__title
+
+  &__title {
+  }
+
+  // .cta__descr
+
+  &__descr {
+  }
+
+  // .cta__box
+
+  &__box {
+  }
+
+  // .cta__btn
 
   &__btn {
   }

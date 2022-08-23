@@ -1,3 +1,81 @@
 //====================================================================================================
 
+//////////////////////////////////////
+/// WE DO SECTION
+///////////////////////////////////////
+
+.we-do {
+  padding: rem(84) 0 rem(50);
+  @media only screen and (max-width: em(768)) {
+    padding: rem(27) 0 rem(20);
+  }
+  // .we-do__container
+
+  &__container {
+  }
+
+  // .we-do__inner
+
+  &__inner {
+    display: flex;
+    gap: rem(30);
+    justify-content: space-between;
+    align-items: flex-start;
+    @media only screen and (max-width: em(850)) {
+      flex-direction: column;
+    }
+  }
+
+  // .we-do__info
+
+  &__info {
+    max-width: rem(513);
+  }
+
+  // .we-do__title
+
+  &__title {
+    margin-bottom: rem(15);
+  }
+
+  // .we-do__text
+
+  &__text {
+    line-height: percent(30, 16);
+    margin-bottom: rem(40);
+  }
+
+  // .we-do__btn
+
+  &__btn {
+    @media only screen and (max-width: em(425)) {
+      margin: 0 auto;
+    }
+  }
+
+  // .we-do__image
+
+  &__image {
+  }
+
+  // .we-do__img
+
+  &__img {
+    @media only screen and (max-width: em(850)) {
+      display: block;
+      margin-bottom: rem(24);
+      margin-top: rem(13);
+      width: 100%;
+    }
+    @media only screen and (max-width: em(425)) {
+      width: rem(280);
+      margin: rem(13) auto rem(24);
+    }
+  }
+}
+.title {
+}
+.btn {
+}
+
 //====================================================================================================
