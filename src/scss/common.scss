@@ -344,6 +344,19 @@
     }
   }
 
+  // .slider__note
+
+  &__note {
+    font-weight: 400;
+    font-size: rem(14);
+    line-height: percent(17, 14);
+    @include adaptiveValue('margin-bottom', 15, 12, 1600, 375, 1);
+    color: $titleColor;
+    @media only screen and (max-width: em(768)) {
+      display: none;
+    }
+  }
+
   // .slider__desc
 
   &__desc {
@@ -405,6 +418,12 @@
   @media only screen and (max-width: em(768)) {
     padding: rem(20) 0 rem(85);
   }
+  &--catalog {
+    padding: rem(160) 0 rem(102);
+    @media only screen and (max-width: em(768)) {
+      padding: rem(73) 0 rem(27);
+    }
+  }
 
   // .similar-goods__container
 
@@ -421,9 +440,23 @@
   // .similar-goods__inner
 
   &__inner {
-    display: flex;
-    gap: rem(50);
+    // display: flex;
+    // gap: rem(50);
+    // justify-content: space-between;
+    display: grid;
+    grid-template: auto/1fr;
+    column-gap: rem(50);
     justify-content: space-between;
+    row-gap: rem(50);
+  }
+
+  // .similar-goods__items
+
+  &__items {
+    display: flex;
+    border-bottom: 2px solid #eeeff2;
+    gap: rem(50);
+    padding-bottom: rem(50);
     @media only screen and (max-width: em(650)) {
       flex-direction: column;
     }
@@ -446,6 +479,10 @@
   &__box {
     @media only screen and (max-width: em(1200)) {
       text-align: center;
+      min-height: rem(284);
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
   }
 
@@ -480,6 +517,10 @@
     @include adaptiveValue('font-size', 17, 14, 1600, 375, 1);
     @include adaptiveValue('line-height', 25, 20, 1600, 375, 1);
     @include adaptiveValue('margin-bottom', 22, 28, 1600, 375, 1);
+    min-height: rem(75);
+    @media only screen and (max-width: em(1200)) {
+      min-height: rem(40);
+    }
   }
 
   // .similar-goods__btn

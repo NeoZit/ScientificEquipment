@@ -45,6 +45,7 @@
     "gulp-webpcss": "1.1.1",
     "gulp-zip": "5.1.0",
     "html-webpack-plugin": "5.5.0",
+    "imask": "^6.4.2",
     "inputmask": "5.0.7",
     "lightgallery": "2.5.0",
     "load-plugins": "2.1.2",

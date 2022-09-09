@@ -45,7 +45,7 @@
       position: fixed;
       left: -100%;
       transition: all 0.5s;
-      top: rem(95);
+      top: rem(66);
       flex-direction: column;
       align-items: start;
       justify-content: start;
@@ -57,7 +57,7 @@
       .menu-open & {
         position: fixed;
         left: 0;
-        padding: rem(0) 0 0 rem(12);
+        padding: rem(29) 0 0 rem(12);
         overflow: auto;
         opacity: 1;
         visibility: visible;

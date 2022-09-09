@@ -14,6 +14,8 @@
   &__top {
     display: flex;
     margin-bottom: rem(67);
+    gap: rem(28) rem(55);
+    flex-wrap: wrap;
   }
 
   // .footer__box
@@ -25,7 +27,6 @@
   // .footer__info
 
   &__info {
-    margin-right: rem(55);
   }
 
   // .footer__info-item
@@ -72,6 +73,9 @@
 
   &__bottom {
     margin-bottom: rem(40);
+    @media only screen and (max-width: em(576)) {
+      margin-bottom: rem(20);
+    }
   }
 
   // .footer__copy

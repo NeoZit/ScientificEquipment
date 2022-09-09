@@ -60,7 +60,7 @@ flsFunctions.spollers();
 Документация: https://template.fls.guru/template-docs/funkcional-popup.html
 Сниппет (HTML): pl
 */
-// import './libs/popup.js'
+import './libs/popup.js';
 
 /*
 Модуль параллакса мышью
@@ -98,7 +98,7 @@ import './libs/select.js';
 Документация плагина: https://github.com/RobinHerbots/inputmask
 Сниппет(HTML):
 */
-// import "./files/forms/inputmask.js";
+// import './files/forms/inputmask.js';
 
 /* Модуль работы с ползунком */
 /*

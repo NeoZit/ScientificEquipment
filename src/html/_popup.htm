@@ -1,11 +1,56 @@
-<!-- 
 <div id="popup" aria-hidden="true" class="popup">
-	<div class="popup__wrapper">
-		<div class="popup__content">
-			<button data-close type="button" class="popup__close">Закрыть</button>
-			<div class="popup__text">
-			</div>
-		</div>
-	</div>
+  <div class="popup__wrapper">
+    <div class="popup__content">
+      <button data-close type="button" class="popup__close">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M16 1.4L14.6 0L8 6.6L1.4 0L0 1.4L6.6 8L0 14.6L1.4 16L8 9.4L14.6 16L16 14.6L9.4 8L16 1.4Z"
+            fill="#4F5665"
+          />
+        </svg>
+      </button>
+      <div class="logo">
+        <span class="logo__text logo__text--green">Scientific</span>
+        <span class="logo__text logo__text--black">Equipment</span>
+      </div>
+      <div class="popup__thank" hidden>
+        <p class="popup__thank-heading">Спасибо!</p>
+        <p class="popup__thank-heading">Ваша заявка успешна принята!</p>
+        <p class="popup__thank-text">Скоро с вами свяжется наш менеджер для уточнения деталей заказа</p>
+      </div>
+      <form class="popup__form" name="popup">
+        <label for="" class="popup__box">
+          Ваше имя<span class="popup__star">*</span>
+          <input
+            type="text"
+            class="popup__input popup__input--name"
+            name="name"
+            placeholder="Как к вам обращаться?"
+            required
+            data-reg="^[А-Я]{1}[а-я]{1,14}$" /></label
+        ><label for="" class="popup__box">
+          Номер телефона<span class="popup__star">*</span>
+          <input
+            type="tel"
+            class="popup__input popup__input--phone"
+            id="popup__phone"
+            name="phone"
+            placeholder="Введите ваш номер телефона"
+            required
+            data-reg="^(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){10,14}(\s*)?$" /></label
+        ><label for="" class="popup__box">
+          Комментарий
+          <textarea class="popup__text" placeholder="Когда с вами удобнее связаться?"></textarea>
+        </label>
+        <div class="popup__box-check">
+          <input type="checkbox" class="popup__checkbox" id="checkbox" required />
+          <label for="checkbox" class="popup__check">
+            Даю своё согласие на обработку <span class="popup__check-text">персональных данных</span>
+          </label>
+        </div>
+
+        <button class="popup__btn popup__btn--disabled btn" name="button" disabled>Оставить заявку</button>
+      </form>
+    </div>
+  </div>
 </div>
- -->

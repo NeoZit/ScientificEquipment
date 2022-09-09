@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru">
+  @@include('html/_head.htm',{ "title":"Каталог" })
+  <body>
+    <div class="wrapper">
+      @@include('html/_header.htm',{})
+      <main class="page">
+        <section class="similar-goods similar-goods--catalog">
+          <div class="similar-goods__container">
+            <h2 class="similar-goods__title title">Каталог геологического оборудования</h2>
+            <div class="similar-goods__inner">
+              <div class="similar-goods__items">
+                <div class="similar-goods__item">
+                  <div class="similar-goods__box">
+                    <img src="@img/similar/motobyr.png" alt="мотобур" class="similar-goods__img" />
+                  </div>
+                  <div class="similar-goods__info">
+                    <h3 class="similar-goods__name">
+                      <a href="similar-goods__name-link">Профессиональное геологическое оборудование</a>
+                    </h3>
+                    <p class="similar-goods__descr">
+                      Ручной мотобур ПМБ-2б для отбора геологических, геофизических, геохимических и прочих проб
+                    </p>
+                    <a href="#" class="similar-goods__btn btn btn--light" data-popup="#popup">Купить</a>
+                  </div>
+                </div>
+                <div class="similar-goods__item">
+                  <div class="similar-goods__box">
+                    <img src="@img/similar/tank.png" alt="балон" class="similar-goods__img" />
+                  </div>
+                  <div class="similar-goods__info">
+                    <h3 class="similar-goods__name">
+                      <a href="similar-goods__name-link">Бак переносной с ручным насосом</a>
+                    </h3>
+                    <p class="similar-goods__descr">10-литровый бак для воды с ручным насосом.</p>
+                    <a href="#" class="similar-goods__btn btn btn--light" data-popup="#popup">Купить</a>
+                  </div>
+                </div>
+              </div>
+              <div class="similar-goods__items">
+                <div class="similar-goods__item">
+                  <div class="similar-goods__box">
+                    <img src="@img/similar/pipe.png" alt="балон" class="similar-goods__img" />
+                  </div>
+                  <div class="similar-goods__info">
+                    <h3 class="similar-goods__name">
+                      <a href="similar-goods__name-link">Безрезьбовая буровая коронка с алмазным наконечником</a>
+                    </h3>
+                    <p class="similar-goods__descr">Буровая коронка из высокопрочной, немагнитной нержавеющей стали</p>
+                    <a href="#" class="similar-goods__btn btn btn--light" data-popup="#popup">Купить</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      @@include('html/_footer.htm',{})
+    </div>
+    @@include('html/_popup.htm',{}) @@include('html/_js.htm',{})
+  </body>
+</html>
